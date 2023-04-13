@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;700&display=swap");
+:root {
+  --font-input: 18px;
+  --primary-font-size: 20px;
+  --text-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh; /* FallBack */
+  height: 100dvh;
+
+  font-family: "Roboto Slab", serif;
+  font-size: var(--primary-font-size);
+
+  display: grid;
+  place-items: center;
+
+  background: #6441a5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2a0845,
+    #6441a5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2a0845,
+    #6441a5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Utilities */
+.mt-15px {
+  margin-top: 15px;
+}
+
+#form-wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(20px);
+  padding: 30px 20px;
+  border-radius: 3px;
+}
+
+#form > h1:first-child {
+  color: var(--text-color);
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: clamp(2rem, 2rem + 1vw, 3rem);
+}
+
+#form .input,
+#form .label {
+  display: block;
+  width: 100%;
+  color: var(--text-color);
+  padding-inline: 5px;
+}
+
+#form .input {
+  font-size: var(--font-input);
+  background-color: transparent;
+  padding-block: 15px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #fff;
+  transition: border 0.2s;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  font-size: var(--font-input);
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-size: var(--font-input);
+}
+
+::placeholder {
+  font-size: var(--font-input);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfeild;
+  -moz-appearance: textfield;
+}
+
+.input:focus,
+.input:hover {
+  outline: none;
+  border: 2px solid #fff !important;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px 22px;
+  cursor: pointer;
+  border: none;
+  font-size: var(--primary-font-size);
+}
+
+.btn-pink {
+  background-color: #ff00a9;
+  color: var(--text-color);
+}
+
+.field-error {
+    display: inline-block;
+    color: #ff00a9;
+    margin-top: 5px;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.name_error, .mobile_error,.city_error {
+    display: none;
+}   
